@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RobTech — المرحلة الثانية</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="grid"></div>
+<header>
+  <a class="logo"><b>R</b> Rob<span>Tech</span></a>
+  <span class="phase">PHASE 2 · AI AGENT</span>
+</header>
+
+<main>
+<section class="hero">
+  <div class="pill"><i></i> الوكيل الذكي متصل بالـBackend</div>
+  <h1>اكتب الموقع الذي تريده<br><em>RobTech يبنيه فعليًا.</em></h1>
+  <p>هذه المرحلة تربط الواجهة بـNode.js وOpenAI Responses API وأدوات إنشاء الملفات وتجميع ZIP.</p>
+</section>
+
+<section class="builder">
+  <textarea id="prompt" placeholder="مثال: أنشئ موقعًا عصريًا لشركة برمجيات عربية، فيه الصفحة الرئيسية والخدمات والأعمال والتواصل، واجعله متجاوبًا..."></textarea>
+  <div class="bar">
+    <div class="quick">
+      <button onclick="fill('أنشئ موقع Portfolio لمبرمج عربي مع نبذة وأعمال وخدمات ونموذج تواصل')">Portfolio</button>
+      <button onclick="fill('أنشئ موقع شركة تقنية حديثة باللون الأزرق الداكن مع خدمات وأعمال وتواصل')">شركة</button>
+      <button onclick="fill('أنشئ صفحة هبوط لمنتج SaaS حديثة ومتجاوبة')">Landing</button>
+    </div>
+    <button id="build" class="build" onclick="buildProject()">إنشاء المشروع ←</button>
+  </div>
+</section>
+
+<section class="dashboard">
+  <div class="terminal">
+    <div class="term-head"><span></span><span></span><span></span><b>robtech-agent</b></div>
+    <div id="logs"><div class="muted">في انتظار الطلب...</div></div>
+  </div>
+  <aside>
+    <div class="aside-title"><b>المشروع</b><span id="state">جاهز</span></div>
+    <div id="files"><div class="empty">ستظهر الملفات هنا بعد البناء</div></div>
+    <div class="actions">
+      <button id="zip" disabled onclick="downloadZip()">تحميل ZIP</button>
+      <button id="health" onclick="health()">حالة النظام</button>
+    </div>
+  </aside>
+</section>
+
+<section class="note">
+  <b>تنبيه مهم:</b> مفتاح الذكاء الاصطناعي يبقى في الخادم داخل <code>.env</code> ولا يظهر للمستخدم.
+</section>
+</main>
+
+<footer>RobTech · AI Website Builder</footer>
+<script src="app.js"></script>
+</body>
+</html>
